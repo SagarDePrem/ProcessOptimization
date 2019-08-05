@@ -1,0 +1,3243 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+PROCESS OPTIMIZATION
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+ASSIGNMENT 2
+\end_layout
+
+\begin_layout Author
+Prem Sagar S - AE14B021
+\end_layout
+
+\begin_layout Description
+1.
+ 
+\begin_inset Formula $f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}1\\
+8
+\end{pmatrix}^{T}x+\frac{1}{2}x^{T}\begin{pmatrix}-4 & 0\\
+0 & -4
+\end{pmatrix}x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow\nabla^{2}f=\begin{pmatrix}-4 & 0\\
+0 & -4
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Characteristic equation 
+\begin_inset Formula $(-4-\lambda)(-4-\lambda)-0.0=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow(\lambda+4)^{2}=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow\lambda_{1}=\lambda_{2}=-4$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Hessian is 
+\series bold
+negative definite
+\series default
+ and the function is 
+\series bold
+concave
+\series default
+, i.e, it is a hill in 3D space, with 
+\series bold
+circles
+\series default
+ as contours.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\nabla f=\begin{pmatrix}-4 & 0\\
+0 & -4
+\end{pmatrix}x^{*}+\begin{pmatrix}1\\
+8
+\end{pmatrix}=0\Longrightarrow x^{*}=\begin{pmatrix}0.25\\
+2
+\end{pmatrix}$
+\end_inset
+
+ is a point of 
+\series bold
+global maximum.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /media/prem/New Volume/ACADEMICS/Sem 5/Process Optimization/HW2/f1.gif
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contours of the function; darker the region lower the magnitude.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+f increases the most along 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Starting from 
+\begin_inset Formula $\begin{pmatrix}3\\
+3
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $p^{1}=\nabla f=\begin{pmatrix}-4 & 0\\
+0 & -4
+\end{pmatrix}\begin{pmatrix}3\\
+3
+\end{pmatrix}+\begin{pmatrix}1\\
+8
+\end{pmatrix}=\begin{pmatrix}-11\\
+-4
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+f increases upto some point x' along and then starts decreasing.
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}-11 & -4\end{pmatrix}\begin{pmatrix}-11\\
+-4
+\end{pmatrix}}{\begin{pmatrix}-11 & -4\end{pmatrix}\begin{pmatrix}-4 & 0\\
+0 & -4
+\end{pmatrix}\begin{pmatrix}-11\\
+-4
+\end{pmatrix}}=0.25$
+\end_inset
+
+.
+ Thus, we must advance 
+\begin_inset Formula $\alpha p^{1}=-0.25*\begin{pmatrix}-11\\
+-4
+\end{pmatrix}=\begin{pmatrix}2.75\\
+1
+\end{pmatrix}$
+\end_inset
+
+ which gives 
+\begin_inset Formula $\begin{pmatrix}0.25\\
+2
+\end{pmatrix}$
+\end_inset
+
+ the stationary point.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f decreases the most along 
+\begin_inset Formula $p^{2}=-\nabla f=\begin{pmatrix}11\\
+4
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+f decreases upto some point x
+\begin_inset Quotes erd
+\end_inset
+
+ and then starts increasing.
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}11 & 4\end{pmatrix}\begin{pmatrix}-11\\
+-4
+\end{pmatrix}}{\begin{pmatrix}11 & 4\end{pmatrix}\begin{pmatrix}-4 & 0\\
+0 & -4
+\end{pmatrix}\begin{pmatrix}11\\
+4
+\end{pmatrix}}=-0.25$
+\end_inset
+
+.
+ Negative 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ indicates that the advancement is in the opposite direction where f increases.
+ Thus along 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+, f keeps decreasing and never increases again.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f does not change in directions perpendicular to 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ .
+ The distance traversed must be infinitesimal.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p^{3}.\nabla f=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow p^{3}=\begin{pmatrix}4\\
+-11
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Description
+2.
+ 
+\begin_inset Formula $f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}-8\\
+-8
+\end{pmatrix}^{T}x+\frac{1}{2}x^{T}\begin{pmatrix}4 & 0\\
+0 & 4
+\end{pmatrix}x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow\nabla^{2}f=\begin{pmatrix}4 & 0\\
+0 & 4
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Characteristic equation 
+\begin_inset Formula $(4-\lambda)(4-\lambda)-0.0=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow(\lambda-4)^{2}=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow\lambda_{1}=\lambda_{2}=4$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Hessian is 
+\series bold
+positive definite
+\series default
+ and the function is 
+\series bold
+convex
+\series default
+, i.e, it is a valleyin 3D space, with 
+\series bold
+circles
+\series default
+ as contours.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}-8\\
+-8
+\end{pmatrix}+\begin{pmatrix}4 & 0\\
+0 & 4
+\end{pmatrix}x=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow x=\begin{pmatrix}2\\
+2
+\end{pmatrix}$
+\end_inset
+
+ is a stationary point of f and a 
+\series bold
+global minimum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename HW2/f2.gif
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contours of the function; darker the region lower the magnitude.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+f increases the most along 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Starting from 
+\begin_inset Formula $\begin{pmatrix}3\\
+3
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $p^{1}=\nabla f=\begin{pmatrix}4 & 0\\
+0 & 4
+\end{pmatrix}\begin{pmatrix}3\\
+3
+\end{pmatrix}+\begin{pmatrix}-8\\
+-8
+\end{pmatrix}=\begin{pmatrix}4\\
+4
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}4 & 4\end{pmatrix}\begin{pmatrix}4\\
+4
+\end{pmatrix}}{\begin{pmatrix}4 & 4\end{pmatrix}\begin{pmatrix}4 & 0\\
+0 & 4
+\end{pmatrix}\begin{pmatrix}4\\
+4
+\end{pmatrix}}=-0.25$
+\end_inset
+
+.
+ Negative 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ indicates that the advancement is in the opposite direction where f decreases.
+ Thus along 
+\begin_inset Formula $p^{1}$
+\end_inset
+
+, f keeps increasing and never decreases again.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f decreases the most along 
+\begin_inset Formula $p^{2}=-\nabla f=\begin{pmatrix}-4\\
+-4
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Thus, we must advance 
+\begin_inset Formula $\alpha p=0.25*\begin{pmatrix}4\\
+4
+\end{pmatrix}=\begin{pmatrix}1\\
+1
+\end{pmatrix}$
+\end_inset
+
+ which gives 
+\begin_inset Formula $\begin{pmatrix}2\\
+2
+\end{pmatrix}$
+\end_inset
+
+ the stationary point.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f does not change in directions perpendicular to 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ .
+ The distance traversed must be infinitesimal.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p^{3}.\nabla f=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow p^{3}=\begin{pmatrix}-4\\
+4
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+3.
+ 
+\begin_inset Formula $f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}-2.41\\
+9.34
+\end{pmatrix}^{T}x+\frac{1}{2}x^{T}\begin{pmatrix}-6.35 & -1.97\\
+-1.97 & -5.65
+\end{pmatrix}x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\nabla^{2}f=\begin{pmatrix}-6.35 & -1.97\\
+-1.97 & -5.65
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Characteristic equation 
+\begin_inset Formula $(-6.35-\lambda)(-5.65-\lambda)-(-1.97)(-1.97)=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\lambda_{1}=-8.00$
+\end_inset
+
+ & 
+\begin_inset Formula $\lambda_{2}=-3.99$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Hessian is 
+\series bold
+negative definite
+\series default
+ and the function is 
+\series bold
+concave
+\series default
+, i.e, it is a hill in 3D space, with 
+\series bold
+ellipses
+\series default
+ as contours.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}-8\\
+-8
+\end{pmatrix}+\begin{pmatrix}4 & 0\\
+0 & 4
+\end{pmatrix}x=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow x=\begin{pmatrix}2\\
+2
+\end{pmatrix}$
+\end_inset
+
+ is a stationary point of f and a 
+\series bold
+global maximum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename HW2/f3.gif
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contours of the function; darker the region lower the magnitude.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+f increases the most along 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Starting from 
+\begin_inset Formula $\begin{pmatrix}3\\
+3
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $p^{1}=\nabla f=\begin{pmatrix}-6.35 & -1.97\\
+-1.97 & -5.65
+\end{pmatrix}\begin{pmatrix}3\\
+3
+\end{pmatrix}+\begin{pmatrix}-2.41\\
+9.34
+\end{pmatrix}=\begin{pmatrix}-27.37\\
+-13.52
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+f increases upto some point x' along and then starts decreasing.
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}-27.37 & -13.52\end{pmatrix}\begin{pmatrix}-27.37\\
+-13.52
+\end{pmatrix}}{\begin{pmatrix}-27.37 & -13.52\end{pmatrix}\begin{pmatrix}-6.35 & -1.97\\
+-1.97 & -5.65
+\end{pmatrix}\begin{pmatrix}-27.37\\
+-13.52
+\end{pmatrix}}=0.13$
+\end_inset
+
+.
+ Thus, we must advance 
+\begin_inset Formula $\alpha p^{1}=0.13*\begin{pmatrix}-27.37\\
+-13.52
+\end{pmatrix}=\begin{pmatrix}-3.56\\
+1.76
+\end{pmatrix}$
+\end_inset
+
+ which gives 
+\begin_inset Formula $\begin{pmatrix}-0.56\\
+4.76
+\end{pmatrix}$
+\end_inset
+
+ after which the function decreases.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f decreases the most along 
+\begin_inset Formula $p^{2}=-\nabla f=\begin{pmatrix}27.37\\
+13.52
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Negative 
+\begin_inset Formula $\alpha=-0.13$
+\end_inset
+
+ indicates that the advancement is in the opposite direction where f increases.
+ Thus along 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+, f keeps decreasing and never increases again.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f does not change in directions perpendicular to 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ .
+ The distance traversed must be infinitesimal.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p^{3}.\nabla f=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow p^{3}=\begin{pmatrix}13.52\\
+-27.37
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+4.
+ 
+\begin_inset Formula $f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}2.86\\
+16.17
+\end{pmatrix}^{T}x+\frac{1}{2}x^{T}\begin{pmatrix}8.96 & 5.91\\
+5.91 & 11.04
+\end{pmatrix}x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\nabla^{2}f=\begin{pmatrix}8.96 & 5.91\\
+5.91 & 11.04
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\lambda_{1}=-8.00$
+\end_inset
+
+ & 
+\begin_inset Formula $\lambda_{2}=-3.99$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Hessian is 
+\series bold
+negative definite
+\series default
+ and the function is 
+\series bold
+concave
+\series default
+, i.e, it is a hill in 3D space, with 
+\series bold
+ellipses
+\series default
+ as contours.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}2.86\\
+16.17
+\end{pmatrix}+\begin{pmatrix}8.96 & 5.91\\
+5.91 & 11.04
+\end{pmatrix}x=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow x=\begin{pmatrix}-0.19\\
+1.57
+\end{pmatrix}$
+\end_inset
+
+ is a stationary point of f and a 
+\series bold
+global maximum.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename HW2/f4.gif
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contours of the function; darker the region lower the magnitude.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+f increases the most along 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Starting from 
+\begin_inset Formula $\begin{pmatrix}3\\
+3
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $p^{1}=\nabla f=\begin{pmatrix}8.96 & 5.91\\
+5.91 & 11.04
+\end{pmatrix}\begin{pmatrix}3\\
+3
+\end{pmatrix}+\begin{pmatrix}2.86\\
+16.17
+\end{pmatrix}=\begin{pmatrix}47.47\\
+67.02
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+f increases upto some point x' along and then starts decreasing.
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}47.47 & 67.02\end{pmatrix}\begin{pmatrix}47.47\\
+67.02
+\end{pmatrix}}{\begin{pmatrix}47.47 & 67.02\end{pmatrix}\begin{pmatrix}8.96 & 5.91\\
+5.91 & 11.04
+\end{pmatrix}\begin{pmatrix}47.47\\
+67.02
+\end{pmatrix}}=-0.063$
+\end_inset
+
+.
+ Negative 
+\begin_inset Formula $\alpha=-0.0063$
+\end_inset
+
+ indicates that the advancement is in the opposite direction where f decreases.
+ Thus along 
+\begin_inset Formula $p^{1}$
+\end_inset
+
+, f keeps increasing and never decreases again.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f decreases the most along 
+\begin_inset Formula $p^{2}=-\nabla f=\begin{pmatrix}-47.47\\
+-67.02
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=0.0063$
+\end_inset
+
+.
+ The advancement is 
+\begin_inset Formula $\alpha p^{2}=0.063*\begin{pmatrix}-47.47\\
+-67.02
+\end{pmatrix}=\begin{pmatrix}-2.97\\
+-4.20
+\end{pmatrix}$
+\end_inset
+
+ which gives the point 
+\begin_inset Formula $\begin{pmatrix}0.03\\
+-1.20
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f does not change in directions perpendicular to 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ .
+ The distance traversed must be infinitesimal.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p^{3}.\nabla f=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow p^{3}=\begin{pmatrix}67.02\\
+-47.47
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+5.
+ 
+\begin_inset Formula $f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}8\\
+4
+\end{pmatrix}^{T}x+\frac{1}{2}x^{T}\begin{pmatrix}0 & 4\\
+4 & 0
+\end{pmatrix}x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow\nabla^{2}f=\begin{pmatrix}0 & 4\\
+4 & 0
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow\lambda_{1}=4$
+\end_inset
+
+ & 
+\begin_inset Formula $\lambda_{2}=-4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Hessian is
+\series bold
+ indefinite
+\series default
+ and the function is 
+\series bold
+a symmetric saddle
+\series default
+, with 
+\series bold
+rectangular hyperbolae
+\series default
+ as contours.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}8\\
+4
+\end{pmatrix}+\begin{pmatrix}0 & 4\\
+4 & 0
+\end{pmatrix}x=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow x=\begin{pmatrix}1\\
+2
+\end{pmatrix}$
+\end_inset
+
+ is a stationary point of f and a 
+\series bold
+Saddle point.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename HW2/f5.gif
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contours of the function; darker the region lower the magnitude.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+f increases the most along 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Starting from 
+\begin_inset Formula $\begin{pmatrix}3\\
+3
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $p=\nabla f=\begin{pmatrix}0 & 4\\
+4 & 0
+\end{pmatrix}\begin{pmatrix}3\\
+3
+\end{pmatrix}+\begin{pmatrix}8\\
+4
+\end{pmatrix}=\begin{pmatrix}20\\
+16
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}20 & 16\end{pmatrix}\begin{pmatrix}20\\
+16
+\end{pmatrix}}{\begin{pmatrix}20 & 16\end{pmatrix}\begin{pmatrix}0 & 4\\
+4 & 0
+\end{pmatrix}\begin{pmatrix}20\\
+16
+\end{pmatrix}}=-0.256$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Negative 
+\begin_inset Formula $\alpha=-0.256$
+\end_inset
+
+ indicates that the advancement is in the opposite direction where f decreases.
+ Thus along 
+\begin_inset Formula $p^{1}$
+\end_inset
+
+, f keeps increasing and never decreases again.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f decreases the most along 
+\begin_inset Formula $p=-\nabla f=\begin{pmatrix}-20\\
+-16
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=0.256$
+\end_inset
+
+.
+ The advancement is 
+\begin_inset Formula $\alpha p^{2}=0.256*\begin{pmatrix}-20\\
+-16
+\end{pmatrix}=\begin{pmatrix}-5.12\\
+-4.10
+\end{pmatrix}$
+\end_inset
+
+ which gives the point 
+\begin_inset Formula $\begin{pmatrix}-2.12\\
+-1.10
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f does not change in directions perpendicular to 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ .
+ The distance traversed must be infinitesimal.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p^{3}.\nabla f=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow p^{3}=\begin{pmatrix}16\\
+-20
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+6.
+ 
+\begin_inset Formula $f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}10.49\\
+13.27
+\end{pmatrix}^{T}x+\frac{1}{2}x^{T}\begin{pmatrix}2.61 & 7.88\\
+7.88 & 5.39
+\end{pmatrix}x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Longrightarrow\nabla^{2}f=\begin{pmatrix}2.61 & 7.88\\
+7.88 & 5.39
+\end{pmatrix}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow\lambda_{1}=12.00$
+\end_inset
+
+ & 
+\begin_inset Formula $\lambda_{2}=-4.00$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+Hessian is 
+\series bold
+indefinite
+\series default
+ and the function is 
+\series bold
+an elongated saddle,
+\series default
+ with 
+\series bold
+hyberbolae
+\series default
+ as contours.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}10.49\\
+13.27
+\end{pmatrix}+\begin{pmatrix}2.61 & 7.88\\
+7.88 & 5.39
+\end{pmatrix}x=0$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow x=\begin{pmatrix}-1\\
+-1
+\end{pmatrix}$
+\end_inset
+
+ is a stationary point of f and a 
+\series bold
+saddle point.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename HW2/f6.gif
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contours of the function; darker the region lower the magnitude.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+f increases the most along 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+f decreases the most along 
+\begin_inset Formula $p=-\nabla f$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Starting from 
+\begin_inset Formula $\begin{pmatrix}3\\
+3
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $p=\nabla f=\begin{pmatrix}2.61 & 7.88\\
+7.88 & 5.39
+\end{pmatrix}\begin{pmatrix}3\\
+3
+\end{pmatrix}+\begin{pmatrix}10.49\\
+13.27
+\end{pmatrix}=\begin{pmatrix}41.96\\
+53.08
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}41.96 & 53.08\end{pmatrix}\begin{pmatrix}41.96\\
+53.08
+\end{pmatrix}}{\begin{pmatrix}41.96 & 53.08\end{pmatrix}\begin{pmatrix}2.61 & 7.88\\
+7.88 & 5.39
+\end{pmatrix}\begin{pmatrix}41.96\\
+53.08
+\end{pmatrix}}=-0.0834$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Negative 
+\begin_inset Formula $\alpha=-0.0834$
+\end_inset
+
+ indicates that the advancement is in the opposite direction where f decreases.
+ Thus along 
+\begin_inset Formula $p^{1}$
+\end_inset
+
+, f keeps increasing and never decreases again.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f decreases the most along 
+\begin_inset Formula $p^{2}=-\nabla f=\begin{pmatrix}-41.96\\
+-53.08
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=0.0834$
+\end_inset
+
+.
+ The advancement is 
+\begin_inset Formula $\alpha p^{2}=0.0834*\begin{pmatrix}-41.96\\
+-53.08
+\end{pmatrix}=\begin{pmatrix}-3.50\\
+-4.43
+\end{pmatrix}$
+\end_inset
+
+ which gives the point 
+\begin_inset Formula $\begin{pmatrix}-0.50\\
+-1.43
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f does not change in directions perpendicular to 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ .
+ The distance traversed must be infinitesimal.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p^{3}.\nabla f=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow p^{3}=\begin{pmatrix}41.96\\
+-53.08
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+7.
+ 
+\begin_inset Formula $f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}14\\
+84
+\end{pmatrix}^{T}x+\frac{1}{2}x^{T}\begin{pmatrix}-1 & -6\\
+-6 & -36
+\end{pmatrix}x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Longrightarrow\nabla^{2}f=\begin{pmatrix}-1 & -6\\
+-6 & -36
+\end{pmatrix}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow\lambda_{1}=0$
+\end_inset
+
+ & 
+\begin_inset Formula $\lambda_{2}=-37$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+Hessian is 
+\series bold
+negative semi definite
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}14\\
+84
+\end{pmatrix}+\begin{pmatrix}-1 & -6\\
+-6 & -36
+\end{pmatrix}x=0$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow x=\begin{pmatrix}14-6k\\
+k
+\end{pmatrix}$
+\end_inset
+
+ is the set of all stationary points for any k.
+ Thus, the function is 
+\series bold
+stationary ridge,
+\series default
+ with 
+\series bold
+straight lines
+\series default
+ as contours.
+ The function is maximum at these staionary points.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename HW2/f7.gif
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contours of the function; darker the region lower the magnitude.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+f increases the most along 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Starting from 
+\begin_inset Formula $\begin{pmatrix}3\\
+3
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $p^{1}=\nabla f=\begin{pmatrix}-1 & -6\\
+-6 & -36
+\end{pmatrix}\begin{pmatrix}3\\
+3
+\end{pmatrix}+\begin{pmatrix}14\\
+84
+\end{pmatrix}=\begin{pmatrix}-7\\
+-42
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}-7 & -42\end{pmatrix}\begin{pmatrix}-7\\
+-42
+\end{pmatrix}}{\begin{pmatrix}-7 & -42\end{pmatrix}\begin{pmatrix}-1 & -6\\
+-6 & -36
+\end{pmatrix}\begin{pmatrix}-7\\
+-42
+\end{pmatrix}}=-0.028$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Negative 
+\begin_inset Formula $\alpha=-0.028$
+\end_inset
+
+ indicates that the advancement is in the opposite direction where f decreases.
+ Thus along 
+\begin_inset Formula $p^{1}$
+\end_inset
+
+, f keeps increasing and never decreases again.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f decreases the most along 
+\begin_inset Formula $p^{2}=-\nabla f=\begin{pmatrix}7\\
+42
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=0.028$
+\end_inset
+
+.
+ The advancement is 
+\begin_inset Formula $\alpha p^{2}=0.028*\begin{pmatrix}-7\\
+-42
+\end{pmatrix}=\begin{pmatrix}-0.196\\
+-1.176
+\end{pmatrix}$
+\end_inset
+
+ which gives the point 
+\begin_inset Formula $\begin{pmatrix}2.80\\
+1.82
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f does not change in directions perpendicular to 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ .
+ The distance traversed must be infinitesimal.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p^{3}.\nabla f=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow p^{3}=\begin{pmatrix}-7\\
+42
+\end{pmatrix}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+8.
+ 
+\begin_inset Formula $f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}1\\
+0
+\end{pmatrix}^{T}x+\frac{1}{2}x^{T}\begin{pmatrix}1 & 3\\
+3 & 9
+\end{pmatrix}x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Longrightarrow\nabla^{2}f=\begin{pmatrix}1 & 3\\
+3 & 9
+\end{pmatrix}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow\lambda_{1}=0$
+\end_inset
+
+ & 
+\begin_inset Formula $\lambda_{2}=10$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+Hessian is 
+\series bold
+positive semi definite.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}1\\
+0
+\end{pmatrix}+\begin{pmatrix}1 & 3\\
+3 & 9
+\end{pmatrix}x=0$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+x has no solution.
+ Thus, the function is 
+\series bold
+falling valley,
+\series default
+ with 
+\series bold
+parabolae
+\series default
+ as contours.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename HW2/f8.gif
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contours of the function; darker the region lower the magnitude.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+f increases the most along 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+f decreases the most along 
+\begin_inset Formula $p=-\nabla f$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Starting from 
+\begin_inset Formula $\begin{pmatrix}3\\
+3
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $p^{1}=\nabla f=\begin{pmatrix}1 & 3\\
+3 & 9
+\end{pmatrix}\begin{pmatrix}3\\
+3
+\end{pmatrix}+\begin{pmatrix}1\\
+0
+\end{pmatrix}=\begin{pmatrix}13\\
+36
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}13 & 36\end{pmatrix}\begin{pmatrix}13\\
+36
+\end{pmatrix}}{\begin{pmatrix}13 & 36\end{pmatrix}\begin{pmatrix}1 & 3\\
+3 & 9
+\end{pmatrix}\begin{pmatrix}13\\
+36
+\end{pmatrix}}=-0.1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Negative 
+\begin_inset Formula $\alpha=-0.1$
+\end_inset
+
+ indicates that the advancement is in the opposite direction where f decreases.
+ Thus along 
+\begin_inset Formula $p^{1}$
+\end_inset
+
+, f keeps increasing and never decreases again.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f decreases the most along 
+\begin_inset Formula $p^{2}=-\nabla f=\begin{pmatrix}-13\\
+-36
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=0.1$
+\end_inset
+
+.
+ The advancement is 
+\begin_inset Formula $\alpha p^{2}=0.1*\begin{pmatrix}-13\\
+-36
+\end{pmatrix}=\begin{pmatrix}-1.3\\
+-3.6
+\end{pmatrix}$
+\end_inset
+
+ which gives the point 
+\begin_inset Formula $\begin{pmatrix}1.7\\
+-0.6
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f does not change in directions perpendicular to 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ .
+ The distance traversed must be infinitesimal.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p^{3}.\nabla f=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow p^{3}=\begin{pmatrix}-13\\
+36
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+9.
+ 
+\begin_inset Formula $f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}6\\
+12
+\end{pmatrix}^{T}x+\frac{1}{2}x^{T}\begin{pmatrix}-1 & -2\\
+-2 & -4
+\end{pmatrix}x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Longrightarrow\nabla^{2}f=\begin{pmatrix}-1 & -2\\
+-2 & -4
+\end{pmatrix}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow\lambda_{1}=0$
+\end_inset
+
+ & 
+\begin_inset Formula $\lambda_{2}=-5$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+Hessian is 
+\series bold
+negative semi definite
+\series default
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}6\\
+12
+\end{pmatrix}+\begin{pmatrix}-1 & -2\\
+-2 & -4
+\end{pmatrix}x=0$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow x=\begin{pmatrix}6-2k\\
+k
+\end{pmatrix}$
+\end_inset
+
+ is the set of all staionary points for any k.
+ Thus, the function is 
+\series bold
+stationary hill,
+\series default
+ with 
+\series bold
+straight lines
+\series default
+ as contours.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename HW2/f9.gif
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contours of the function; darker the region lower the magnitude.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+f increases the most along 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Starting from 
+\begin_inset Formula $\begin{pmatrix}3\\
+3
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $p=\nabla f=\begin{pmatrix}-1 & -2\\
+-2 & -4
+\end{pmatrix}\begin{pmatrix}3\\
+3
+\end{pmatrix}+\begin{pmatrix}6\\
+12
+\end{pmatrix}=\begin{pmatrix}3\\
+6
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}3 & 6\end{pmatrix}\begin{pmatrix}3\\
+6
+\end{pmatrix}}{\begin{pmatrix}3 & 6\end{pmatrix}\begin{pmatrix}-1 & -2\\
+-2 & -4
+\end{pmatrix}\begin{pmatrix}3\\
+6
+\end{pmatrix}}=-0.2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Negative 
+\begin_inset Formula $\alpha=-0.2$
+\end_inset
+
+ indicates that the advancement is in the opposite direction where f decreases.
+ Thus along 
+\begin_inset Formula $p^{1}$
+\end_inset
+
+, f keeps increasing and never decreases again.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f decreases the most along 
+\begin_inset Formula $p=-\nabla f=\begin{pmatrix}-3\\
+-6
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=0.2$
+\end_inset
+
+.
+ The advancement is 
+\begin_inset Formula $\alpha p^{2}=0.2*\begin{pmatrix}-3\\
+-6
+\end{pmatrix}=\begin{pmatrix}-0.6\\
+-1.2
+\end{pmatrix}$
+\end_inset
+
+ which gives the point 
+\begin_inset Formula $\begin{pmatrix}2.4\\
+1.8
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f does not change in directions perpendicular to 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ .
+ The distance traversed must be infinitesimal.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p^{3}.\nabla f=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow p^{3}=\begin{pmatrix}3\\
+-6
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+10.
+ 
+\begin_inset Formula $f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}1\\
+0
+\end{pmatrix}^{T}x+\frac{1}{2}x^{T}\begin{pmatrix}-1 & -3\\
+-3 & -9
+\end{pmatrix}x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Longrightarrow\nabla^{2}f=\begin{pmatrix}-1 & -3\\
+-3 & -9
+\end{pmatrix}$
+\end_inset
+
+ 
+\begin_inset Formula $\Longrightarrow\lambda_{1}=0$
+\end_inset
+
+ & 
+\begin_inset Formula $\lambda_{2}=-10$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+Hessian is 
+\series bold
+negative semi definite.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}1\\
+0
+\end{pmatrix}+\begin{pmatrix}-1 & -3\\
+-3 & -9
+\end{pmatrix}x=0$
+\end_inset
+
+
+\begin_inset Formula $\Longrightarrow$
+\end_inset
+
+x has no solution.
+ Thus, the function is 
+\series bold
+rising ridge,
+\series default
+ with 
+\series bold
+parabolae
+\series default
+ as contours.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename HW2/f10.gif
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Contours of the function; darker the region lower the magnitude.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+f increases the most along 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Starting from 
+\begin_inset Formula $\begin{pmatrix}3\\
+3
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $p^{1}=\nabla f=\begin{pmatrix}-1 & -3\\
+-3 & -9
+\end{pmatrix}\begin{pmatrix}3\\
+3
+\end{pmatrix}+\begin{pmatrix}1\\
+0
+\end{pmatrix}=\begin{pmatrix}-10\\
+-36
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}-10 & -36\end{pmatrix}\begin{pmatrix}-10\\
+-36
+\end{pmatrix}}{\begin{pmatrix}-10 & -36\end{pmatrix}\begin{pmatrix}-1 & -3\\
+-3 & -9
+\end{pmatrix}\begin{pmatrix}-10\\
+-36
+\end{pmatrix}}=0.1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=0.1$
+\end_inset
+
+.
+ The advancement is 
+\begin_inset Formula $\alpha p^{1}=0.1*\begin{pmatrix}-10\\
+-36
+\end{pmatrix}=\begin{pmatrix}-1.0\\
+-3.6
+\end{pmatrix}$
+\end_inset
+
+ which gives the point 
+\begin_inset Formula $\begin{pmatrix}2\\
+-0.6
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f decreases the most along 
+\begin_inset Formula $p^{2}=-\nabla f=\begin{pmatrix}-13\\
+-36
+\end{pmatrix}$
+\end_inset
+
+.
+ Along 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+, f keeps decreasing and never increases again.
+ 
+\end_layout
+
+\begin_layout Itemize
+f does not change in directions perpendicular to 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ .
+ The distance traversed must be infinitesimal.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p^{3}.\nabla f=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow p^{3}=\begin{pmatrix}-13\\
+36
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="6">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+ Sl.No.
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Geometry
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stationary point nature
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Nature of contours.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Circular hill
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Global maximum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Circles
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Circular valley
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Global minimum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Circles
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-8.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-3.99
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Elliptical hill
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Global maximum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ellipses
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.99
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ellipticalvalley
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Global minimum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Ellipses
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Symmetric saddle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Saddle point
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rectangular Hyperbolae
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-4.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Elongated saddle
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Saddle point
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hyperbolae
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-37
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stationary ridge
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+minimum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Straight lines
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Falling valley
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Located at 
+\begin_inset Formula $\infty$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parabolae
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Stationary hill
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+maximum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Straight lines
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+-10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rising ridge
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Located at 
+\begin_inset Formula $\infty$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Parabolae
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Summary
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,976 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+PROCESS OPTIMIZATION
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+ASSIGNMENT 2
+\end_layout
+
+\begin_layout Author
+Prem Sagar S - AE14B021
+\end_layout
+
+\begin_layout Description
+1.
+ 
+\begin_inset Formula $f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}1\\
+8
+\end{pmatrix}^{T}x+\frac{1}{2}x^{T}\begin{pmatrix}-4 & 0\\
+0 & -4
+\end{pmatrix}x$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow\nabla^{2}f=\begin{pmatrix}-4 & 0\\
+0 & -4
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Characteristic equation 
+\begin_inset Formula $(-4-\lambda)(-4-\lambda)-0.0=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow(\lambda+4)^{2}=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow\lambda_{1}=\lambda_{2}=-4$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Hessian is 
+\series bold
+negative definite
+\series default
+ and the function is 
+\series bold
+concave
+\series default
+, i.e, it is a hill in 3D space, with 
+\series bold
+circles
+\series default
+ as contours.
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\nabla f=\begin{pmatrix}-4 & 0\\
+0 & -4
+\end{pmatrix}x^{*}+\begin{pmatrix}1\\
+8
+\end{pmatrix}=0\Longrightarrow x^{*}=\begin{pmatrix}0.25\\
+2
+\end{pmatrix}$
+\end_inset
+
+ is a point of 
+\series bold
+global maximum.
+ 
+\end_layout
+
+\begin_layout Itemize
+f increases the most along 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Starting from 
+\begin_inset Formula $\begin{pmatrix}3\\
+3
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $p^{1}=\nabla f=\begin{pmatrix}-4 & 0\\
+0 & -4
+\end{pmatrix}\begin{pmatrix}3\\
+3
+\end{pmatrix}+\begin{pmatrix}1\\
+8
+\end{pmatrix}=\begin{pmatrix}-11\\
+-4
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+f increases upto some point x' along and then starts decreasing.
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}-11 & -4\end{pmatrix}\begin{pmatrix}-11\\
+-4
+\end{pmatrix}}{\begin{pmatrix}-11 & -4\end{pmatrix}\begin{pmatrix}-4 & 0\\
+0 & -4
+\end{pmatrix}\begin{pmatrix}-11\\
+-4
+\end{pmatrix}}=0.25$
+\end_inset
+
+.
+ Thus, we must advance 
+\begin_inset Formula $\alpha p^{1}=-0.25*\begin{pmatrix}-11\\
+-4
+\end{pmatrix}=\begin{pmatrix}2.75\\
+1
+\end{pmatrix}$
+\end_inset
+
+ which gives 
+\begin_inset Formula $\begin{pmatrix}0.25\\
+2
+\end{pmatrix}$
+\end_inset
+
+ the stationary point.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f decreases the most along 
+\begin_inset Formula $p^{2}=-\nabla f=\begin{pmatrix}11\\
+4
+\end{pmatrix}$
+\end_inset
+
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+f decreases upto some point x
+\begin_inset Quotes erd
+\end_inset
+
+ and then starts increasing.
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}11 & 4\end{pmatrix}\begin{pmatrix}-11\\
+-4
+\end{pmatrix}}{\begin{pmatrix}11 & 4\end{pmatrix}\begin{pmatrix}-4 & 0\\
+0 & -4
+\end{pmatrix}\begin{pmatrix}11\\
+4
+\end{pmatrix}}=-0.25$
+\end_inset
+
+.
+ Negative 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ indicates that the advancement is in the opposite direction where f increases.
+ Thus along 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+, f keeps decreasing and never increases again.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f does not change in directions perpendicular to 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ .
+ The distance traversed must be infinitesimal.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p^{3}.\nabla f=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow p^{3}=k\begin{pmatrix}4\\
+-11
+\end{pmatrix}$
+\end_inset
+
+ for any k.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+2.
+ 
+\begin_inset Formula $f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}-8\\
+-8
+\end{pmatrix}^{T}x+\frac{1}{2}x^{T}\begin{pmatrix}4 & 0\\
+0 & 4
+\end{pmatrix}x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow\nabla^{2}f=\begin{pmatrix}4 & 0\\
+0 & 4
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Characteristic equation 
+\begin_inset Formula $(4-\lambda)(4-\lambda)-0.0=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow(\lambda-4)^{2}=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow\lambda_{1}=\lambda_{2}=4$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Description
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Hessian is 
+\series bold
+positive definite
+\series default
+ and the function is 
+\series bold
+convex
+\series default
+, i.e, it is a valleyin 3D space, with 
+\series bold
+circles
+\series default
+ as contours.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}-8\\
+-8
+\end{pmatrix}+\begin{pmatrix}4 & 0\\
+0 & 4
+\end{pmatrix}x=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow x=\begin{pmatrix}2\\
+2
+\end{pmatrix}$
+\end_inset
+
+ is a stationary point of f and a 
+\series bold
+global minimum.
+\end_layout
+
+\begin_layout Itemize
+f increases the most along 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Starting from 
+\begin_inset Formula $\begin{pmatrix}3\\
+3
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $p^{1}=\nabla f=\begin{pmatrix}4 & 0\\
+0 & 4
+\end{pmatrix}\begin{pmatrix}3\\
+3
+\end{pmatrix}+\begin{pmatrix}-8\\
+-8
+\end{pmatrix}=\begin{pmatrix}4\\
+4
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}4 & 4\end{pmatrix}\begin{pmatrix}4\\
+4
+\end{pmatrix}}{\begin{pmatrix}4 & 4\end{pmatrix}\begin{pmatrix}4 & 0\\
+0 & 4
+\end{pmatrix}\begin{pmatrix}4\\
+4
+\end{pmatrix}}=-0.25$
+\end_inset
+
+.
+ Negative 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ indicates that the advancement is in the opposite direction where f decreases.
+ Thus along 
+\begin_inset Formula $p^{1}$
+\end_inset
+
+, f keeps increasing and never decreases again.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f decreases the most along 
+\begin_inset Formula $p^{2}=-\nabla f=\begin{pmatrix}-4\\
+-4
+\end{pmatrix}$
+\end_inset
+
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Thus, we must advance 
+\begin_inset Formula $\alpha p=0.25*\begin{pmatrix}4\\
+4
+\end{pmatrix}=\begin{pmatrix}1\\
+1
+\end{pmatrix}$
+\end_inset
+
+ which gives 
+\begin_inset Formula $\begin{pmatrix}2\\
+2
+\end{pmatrix}$
+\end_inset
+
+ the stationary point.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f does not change in directions perpendicular to 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ .
+ The distance traversed must be infinitesimal.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p^{3}.\nabla f=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow p^{3}=k\begin{pmatrix}-4\\
+4
+\end{pmatrix}$
+\end_inset
+
+ for any k.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+3.
+ 
+\begin_inset Formula $f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}-2.41\\
+9.34
+\end{pmatrix}^{T}x+\frac{1}{2}x^{T}\begin{pmatrix}-6.35 & -1.97\\
+-1.97 & -5.65
+\end{pmatrix}x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\nabla^{2}f=\begin{pmatrix}-6.35 & -1.97\\
+-1.97 & -5.65
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Characteristic equation 
+\begin_inset Formula $(-6.35-\lambda)(-5.65-\lambda)-(-1.97)(-1.97)=0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\lambda_{1}=-8.00$
+\end_inset
+
+ & 
+\begin_inset Formula $\lambda_{2}=-3.99$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Hessian is 
+\series bold
+negative definite
+\series default
+ and the function is 
+\series bold
+concave
+\series default
+, i.e, it is a hill in 3D space, with 
+\series bold
+ellipses
+\series default
+ as contours.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}-8\\
+-8
+\end{pmatrix}+\begin{pmatrix}4 & 0\\
+0 & 4
+\end{pmatrix}x=0$
+\end_inset
+
+ 
+\begin_inset Formula $\Rightarrow x=\begin{pmatrix}2\\
+2
+\end{pmatrix}$
+\end_inset
+
+ is a stationary point of f and a 
+\series bold
+global maximum.
+\end_layout
+
+\begin_layout Itemize
+f increases the most along 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Starting from 
+\begin_inset Formula $\begin{pmatrix}3\\
+3
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $p^{1}=\nabla f=\begin{pmatrix}-6.35 & -1.97\\
+-1.97 & -5.65
+\end{pmatrix}\begin{pmatrix}3\\
+3
+\end{pmatrix}+\begin{pmatrix}-2.41\\
+9.34
+\end{pmatrix}=\begin{pmatrix}-27.37\\
+-13.52
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+f increases upto some point x' along and then starts decreasing.
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}-27.37 & -13.52\end{pmatrix}\begin{pmatrix}-27.37\\
+-13.52
+\end{pmatrix}}{\begin{pmatrix}-27.37 & -13.52\end{pmatrix}\begin{pmatrix}-6.35 & -1.97\\
+-1.97 & -5.65
+\end{pmatrix}\begin{pmatrix}-27.37\\
+-13.52
+\end{pmatrix}}=0.13$
+\end_inset
+
+.
+ Thus, we must advance 
+\begin_inset Formula $\alpha p^{1}=0.13*\begin{pmatrix}-27.37\\
+-13.52
+\end{pmatrix}=\begin{pmatrix}-3.56\\
+1.76
+\end{pmatrix}$
+\end_inset
+
+ which gives 
+\begin_inset Formula $\begin{pmatrix}-0.56\\
+4.76
+\end{pmatrix}$
+\end_inset
+
+ after which the function decreases.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f decreases the most along 
+\begin_inset Formula $p^{2}=-\nabla f=\begin{pmatrix}27.37\\
+13.52
+\end{pmatrix}$
+\end_inset
+
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Negative 
+\begin_inset Formula $\alpha=-0.13$
+\end_inset
+
+ indicates that the advancement is in the opposite direction where f increases.
+ Thus along 
+\begin_inset Formula $p^{2}$
+\end_inset
+
+, f keeps decreasing and never increases again.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f does not change in directions perpendicular to 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ .
+ The distance traversed must be infinitesimal.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p^{3}.\nabla f=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow p^{3}=k\begin{pmatrix}13.52\\
+-27.37
+\end{pmatrix}$
+\end_inset
+
+ for any k.
+\end_layout
+
+\end_deeper
+\begin_layout Description
+4.
+ 
+\begin_inset Formula $f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}2.86\\
+16.17
+\end{pmatrix}^{T}x+\frac{1}{2}x^{T}\begin{pmatrix}8.96 & 5.91\\
+5.91 & 11.04
+\end{pmatrix}x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\nabla^{2}f=\begin{pmatrix}8.96 & 5.91\\
+5.91 & 11.04
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow\lambda_{1}=-8.00$
+\end_inset
+
+ & 
+\begin_inset Formula $\lambda_{2}=-3.99$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\Rightarrow$
+\end_inset
+
+Hessian is 
+\series bold
+negative definite
+\series default
+ and the function is 
+\series bold
+concave
+\series default
+, i.e, it is a hill in 3D space, with 
+\series bold
+ellipses
+\series default
+ as contours.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\nabla f(x)=$
+\end_inset
+
+
+\begin_inset Formula $\begin{pmatrix}2.86\\
+16.17
+\end{pmatrix}+\begin{pmatrix}8.96 & 5.91\\
+5.91 & 11.04
+\end{pmatrix}x=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow x=\begin{pmatrix}-0.19\\
+1.57
+\end{pmatrix}$
+\end_inset
+
+ is a stationary point of f and a 
+\series bold
+global maximum
+\end_layout
+
+\begin_layout Itemize
+f increases the most along 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Starting from 
+\begin_inset Formula $\begin{pmatrix}3\\
+3
+\end{pmatrix}$
+\end_inset
+
+, 
+\begin_inset Formula $p^{1}=\nabla f=\begin{pmatrix}8.96 & 5.91\\
+5.91 & 11.04
+\end{pmatrix}\begin{pmatrix}3\\
+3
+\end{pmatrix}+\begin{pmatrix}2.86\\
+16.17
+\end{pmatrix}=\begin{pmatrix}47.47\\
+67.02
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+f increases upto some point x' along and then starts decreasing.
+ 
+\end_layout
+
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=-\frac{p^{T}\nabla f}{p^{T}Hp}=-\frac{\begin{pmatrix}47.47 & 67.02\end{pmatrix}\begin{pmatrix}47.47\\
+67.02
+\end{pmatrix}}{\begin{pmatrix}47.47 & 67.02\end{pmatrix}\begin{pmatrix}8.96 & 5.91\\
+5.91 & 11.04
+\end{pmatrix}\begin{pmatrix}47.47\\
+67.02
+\end{pmatrix}}=-0.063$
+\end_inset
+
+.
+ Negative 
+\begin_inset Formula $\alpha=-0.0063$
+\end_inset
+
+ indicates that the advancement is in the opposite direction where f decreases.
+ Thus along 
+\begin_inset Formula $p^{1}$
+\end_inset
+
+, f keeps increasing and never decreases again.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f decreases the most along 
+\begin_inset Formula $p^{2}=-\nabla f=\begin{pmatrix}-47.47\\
+-67.02
+\end{pmatrix}$
+\end_inset
+
+ 
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+The step length is 
+\begin_inset Formula $\alpha=0.0063$
+\end_inset
+
+.
+ The advancement is 
+\begin_inset Formula $\alpha p^{2}=0.063*\begin{pmatrix}-47.47\\
+-67.02
+\end{pmatrix}=\begin{pmatrix}-2.97\\
+-4.20
+\end{pmatrix}$
+\end_inset
+
+ which gives the point 
+\begin_inset Formula $\begin{pmatrix}0.03\\
+-1.20
+\end{pmatrix}$
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+f does not change in directions perpendicular to 
+\begin_inset Formula $\nabla f$
+\end_inset
+
+ .
+ The distance traversed must be infinitesimal.
+\begin_inset Separator latexpar
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $p^{3}.\nabla f=0$
+\end_inset
+
+
+\begin_inset Formula $\Rightarrow p^{3}=k\begin{pmatrix}67.02\\
+-47.47
+\end{pmatrix}$
+\end_inset
+
+ for any k.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
